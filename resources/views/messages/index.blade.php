@@ -32,15 +32,5 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            @foreach ($messages as $message)
-            @if ($loop->last)
 
-            $('#message-' + {{$message->id}})[0].scrollIntoView()
-
-            @endif
-            @endforeach
-        });
-    </script>
 @endsection

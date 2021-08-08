@@ -7,8 +7,9 @@ window.Echo = new Echo({
     namespace: 'App.Events',
     broadcaster: 'socket.io',
     host: window.location.protocol + '//' + window.location.hostname + ':6001',
+
 });
-let OnlineUsersLength = 0;
+ let OnlineUsersLength = 0;
 window.Echo.join(`Online`)
     .here((users) => {
         OnlineUsersLength = users.length;
